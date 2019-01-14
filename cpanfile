@@ -1,0 +1,23 @@
+
+requires 'strictures';
+requires 'Tcl::pTk';
+requires 'IPC::System::Simple';
+requires 'utf8::all';
+requires 'Package::Alias';
+requires 'Mojolicious';
+requires 'Unicode::UTF8';
+requires 'Type::Tiny';
+requires 'Types::URI';
+requires 'true';
+requires 'Mus';
+requires 'namespace::clean';
+requires 'namespace::autoclean';
+requires 'Function::Return';
+requires 'HTML::Entities';
+requires 'List::AllUtils';
+requires 'MooX::LvalueAttribute';
+requires 'Proc::Daemon';
+requires 'File::Share';
+requires 'Config::PL';
+requires 'Data::Dumper::AutoEncode';
+requires 'Return::Type';
