@@ -11,6 +11,7 @@ use true;
 use File::Share qw<dist_dir dist_file>;
 use Path::Tiny;
 use Config::Hash;
+use Hash::Merge::Simple qw<merge>;
 
 use Mus;
 use experimental qw<signatures re_strict refaliasing declared_refs script_run alpha_assertions regex_sets const_attr>;
@@ -66,12 +67,7 @@ sub _build_config ($self) {
   my $config;
   if ( -e $file ) {
     my $user_config = $self->_config_accessor->read_config($file);
-    foreach my $k (sort keys $self->default_config->%*) {
-      if (! exists $user_config->{$k}) {
-        $user_config->{$k} = $self->default_config->{$k};
-      }
-    }
-    $user_config
+    merge $self->default_config, $user_config;
   } else {
     $self->default_config
   }
