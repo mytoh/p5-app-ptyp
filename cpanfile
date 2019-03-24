@@ -21,3 +21,4 @@ requires 'File::Share';
 requires 'Config::PL';
 requires 'Data::Dumper::AutoEncode';
 requires 'Return::Type';
+requires 'Hash::Merge::Simple';
